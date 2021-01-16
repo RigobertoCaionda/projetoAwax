@@ -33,7 +33,7 @@ header{
 	display: none;
 }
 .menu{
-flex:1;/*Vai fazer o menu ocupar o restante da tela*/
+flex:1;
 display: flex;
 justify-content: flex-end;
 }
@@ -51,37 +51,30 @@ justify-content: flex-end;
 	padding-left: 10px;
 	padding-right: 10px;
 	height: 100px;
-	/*display: block;/*Os elementos inline nao tem altura... Para poderem ter altura devemos dar um display block 
-	neles*/
 	display: flex;
 	align-items: center;
-	border-bottom: 5px solid #000;/*Simplesmente para o usuario nao ver a borda a ser elevada para cima quando 
-	passar o mouse*/
+	border-bottom: 5px solid #000;
 }
 .menu li a:hover, .menu .active a{
 	border-bottom: 5px solid #b28756;
 	color: #ccc;
 }
 .banner{
-	height: calc(100vh - 100px);/*Isso vai fazer pegar a area total do monitor do usuario. 100vh e o tamanho 
-	do monitor do usuario, o 100px e o tamanho do header que foi descontado.*/
+	height: calc(100vh - 100px);
 	background-color: #333;
-	background-image:url('../images/bg.jpg');/*Estamos no css, vamos voltar uma pasta(ate assets) e depois 
-	vamos entrar em images*/
-	background-size: cover;/*O cover ajusta o tamanho da imagem de forma a preencher todo o espaco dado a ele*/
-	background-position: bottom;/*Vai priorizar a parte de baixo da imagem*/
+	background-image:url('../images/bg.jpg');
+	background-size: cover;
+	background-position: bottom;
 	overflow: hidden;
 }
 .banner .sliders{
-	width: 1000vw;/*O width do sliders deve ser a largura da quantidade total de sliders que ele suporta, nesse
-	caso estamos imaginando que o banner suporta ate 10 sliders, entao 10 x 100 =1000*/
+	width: 1000vw;
 	height: 100%;
 }
 .banner .slider{
-	width: 100vw;/*Quer dizer que cada slider vai ter a largura da tela*/
+	width: 100vw;
 	height: 100%;
-	display: inline-block;/*Lembra que a propriedade inline nao tem altura e largura? Entao, nos usamos 
-	a propriedade inline-block para deixar um ao lado do outro e ainda assim ter altura e largura.*/
+	display: inline-block;
 	background-color: rgba(0,0,0,0.8);
 }
 .banner .slidearea{
@@ -105,8 +98,7 @@ justify-content: flex-end;
 	margin-top: 20px;
 }
 .button{
-	display: inline-block;/*A tag a tem display inline e como vamos precisar mexer com padding e tal, entao ela 
-	deve ser block*/
+	display: inline-block;
 	background-color: #b28756;
 	color: #fff;
 	text-transform: uppercase;
@@ -118,10 +110,9 @@ justify-content: flex-end;
 	border-radius: 20px;
 }
 .banner .sliders-pointers{
-	width: 100vw;/*Pq nao sabemos quantos pointers vao ter, entao ela pega a area inteira*/
-	height: 20px;/*Altura dos pointers*/
-	position: absolute;/*Como o banner ocupa uma altura total do dispositivo e nao deixa barra de rolagem.
-	Nos nao conseguiriamos ver os pointers, precisamos de um position absolute para isso.*/
+	width: 100vw;
+	height: 20px;
+	position: absolute;
 	margin-top: -50px;
 	display: flex;
 	justify-content: center;
@@ -131,13 +122,12 @@ justify-content: flex-end;
 	width: 15px;
 	height: 15px;
 	border: 2px solid #b28756;
-	border-radius: 8px;/*Para arredondar uma coisa e so deixa-la quadrada e depois dar um border radius da metade*/
+	border-radius: 8px;
 	margin-left: 5px;
 	margin-right: 5px;
 	cursor: pointer;
 }
-.banner .pointer.active{/*Observe que .pointer e .active estao juntos. Eles devem ficar juntos mesmo pq sao duas
-	classes no mesmo local*/
+.banner .pointer.active{
 	background-color: #b28756;
 }
 .default{
@@ -150,8 +140,7 @@ justify-content: flex-end;
 	font-weight: 600;
 }
 .default .section-body{
-	max-width: 1140px;/*Como uma div ocupa o espaco todo, para definirmos o margin auto 
-	precisamos lhe dar um max-width*/
+	max-width: 1140px;
 	margin:auto;
 }
 
@@ -183,7 +172,7 @@ justify-content: flex-end;
 	display: flex;
 }
 .section-aboutus--left{
-	flex:1;/*Vai ocupar todo o resto da tela pois o aboutus right ja tem uma largura fixa*/
+	flex:1;
 }
 .section-aboutus--right{
 	width: 520px;
@@ -253,8 +242,8 @@ justify-content: flex-end;
 	border-left:0;
 }
 .section-projects--photos{
-	width: 100vw;/*Vai usar o tamanho todo da tela*/
-	max-width: 1140px;/*Mas caso o monitor for muito grande, ele vai parar em 1140px */
+	width: 100vw;
+	max-width: 1140px;
 	margin-top: 20px;
 	display: flex;
 	flex-wrap: wrap;
@@ -270,7 +259,7 @@ justify-content: flex-end;
 	cursor: pointer;
 }
 .section-projects--photoarea img{
-	width: inherit;/*Quer dizer que ele vai herdar o width do item anterior que e o fotoarea*/
+	width: inherit;
 	height: inherit;
 }
 .section-projects--photoinfo{
@@ -289,8 +278,7 @@ justify-content: flex-end;
 	font-size: 18px;
 	font-weight: 600;
 }
-.section-projects--photoarea:hover .section-projects--photoinfo{/*Qunado o fotoarea estiver em hover 
-vai se alterar as propriedades de fotoinfo*/
+.section-projects--photoarea:hover .section-projects--photoinfo{
 	display: flex;
 }
 .bg-team{
@@ -311,16 +299,14 @@ vai se alterar as propriedades de fotoinfo*/
 }
 
 .section-team .sliders{
-	width: 1000vw;/*O width do sliders deve ser a largura da quantidade total de sliders que ele suporta, nesse
-	caso estamos imaginando que o banner suporta ate 10 sliders, entao 10 x 100 =1000*/
+	width: 1000vw;
 	height: 100%;
 }
 .section-team .slider{
-	width: 280px;/*Quer dizer que cada slider vai ter a largura da tela*/
+	width: 280px;
 	height: 100%;
 	min-height: 300px;
-	display: inline-block;/*Lembra que a propriedade inline nao tem altura e largura? Entao, nos usamos 
-	a propriedade inline-block para deixar um ao lado do outro e ainda assim ter altura e largura.*/
+	display: inline-block;
 	background-color: #fff;
 	margin-right: 20px;
 }
@@ -614,8 +600,7 @@ vai se alterar as propriedades de fotoinfo*/
 		margin-bottom: 30px;
 	}
 	.section-aboutus--right{
-		width: auto;/*Quando vc deixa a largura como automatica, vc esta tirando a largura e deixando livre para
-		que ela assuma a largura que tiver*/
+		width: auto;
 	}
 	.section-services{
 		flex-wrap: wrap;
@@ -689,7 +674,7 @@ vai se alterar as propriedades de fotoinfo*/
 		position: absolute;
 		z-index: 99;
 		background-color: rgba(0,0,0,0.9);
-		width: 80vw;/*70% da tela. Se quiser toda tela e so por 100*/
+		width: 80vw;
 		height: calc(100vh - 100px);
 		top: 100px;
 		right: 0;
